@@ -1,0 +1,6 @@
+{
+  "add_prefix_space": true,
+  "model_max_length": 512,
+  "padding_side": "left",
+  "truncation_side": "right"
+}

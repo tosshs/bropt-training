@@ -1,0 +1,133 @@
+# ========================================================
+# 🌐 OS-Specific Garbage (Mac/Windows/Linux)
+# ========================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+*~
+*.bak
+*.tmp
+*.orig
+
+# ========================================================
+# 🛠️ IDEs / Editor Trash
+# ========================================================
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+*.sw?
+
+# ========================================================
+# 🧠 Python/Bash Scripts
+# ========================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sh~
+*.log
+*.out
+*.pid
+*.pid.lock
+*.db
+*.sqlite
+.venv/
+venv/
+.env
+.env.*
+.env.*.local
+
+# ========================================================
+# ⚙️ Terraform
+# ========================================================
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+terraform.tfvars
+*.tfplan
+
+# ========================================================
+# 📦 Helm & Kubernetes
+# ========================================================
+charts/
+tmpcharts/
+*.tgz
+Chart.lock
+*.yaml.backup
+*.yml.backup
+*.release-name
+releases/
+values-*.yaml
+
+# ========================================================
+# 🚢 ArgoCD / K8s
+# ========================================================
+.kube/
+.kubeconfig
+.kube_config*
+secrets/
+*.enc.yaml
+manifests/generated/
+*.sealed-secret.yaml
+
+# ========================================================
+# ☁️ Cloud Platform Extras
+# ========================================================
+.aws/
+.gcp/
+*.pem
+*.pub
+*.crt
+*.key
+
+# ========================================================
+# ⚙️ CI/CD Junk
+# ========================================================
+# Jenkins
+*.jenkinsfile.bak
+# TeamCity
+*.teamcity/
+# GitHub Actions
+*.workflow-temp*
+# Generic
+ci-output/
+build/
+dist/
+coverage/
+cache/
+tmp/
+*.lock
+
+# ========================================================
+# 🧪 Testing / Coverage
+# ========================================================
+.mypy_cache/
+.pytest_cache/
+coverage.xml
+htmlcov/
+.noseids
+
+# ========================================================
+# 🤖 AI / Training Data
+# ========================================================
+runs/
+checkpoints/
+wandb/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.npy
+*.npz
+
+# ========================================================
+# 🧼 Git Hygiene
+# ========================================================
+!.gitignore

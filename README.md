@@ -121,3 +121,20 @@ Weekly Summary:
 
 Still savage, even about your diet.
 
+
+## 🍽️ Daily Macro Hunter Mode
+
+Track meals like a savage:
+
+Add a meal:
+```
+python3 scripts/log_food.py meal '200g chicken breast, 100g rice cooked, 10g olive oil'
+```
+
+End the day & log deficit/surplus:
+```
+python3 scripts/log_food.py end 2200 'Push day workout'
+```
+
+It’ll auto-save to `logs/food_log.jsonl` and roast you accordingly.
+

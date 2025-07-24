@@ -1,3 +1,24 @@
+# Make sure you’re in the repo
+cd bropt-training
+
+# Checkout new branch
+git checkout -b feature/daily-macro-hunter
+
+# Create data folder & food macro DB
+mkdir -p data
+cat <<'EOF' > data/food_macros.json
+{
+  "chicken breast": {"calories": 165, "protein": 31, "carbs": 0, "fats": 3.6, "unit": "100g"},
+  "rice cooked": {"calories": 130, "protein": 2.7, "carbs": 28, "fats": 0.3, "unit": "100g"},
+  "olive oil": {"calories": 884, "protein": 0, "carbs": 0, "fats": 100, "unit": "100g"},
+  "egg": {"calories": 155, "protein": 13, "carbs": 1.1, "fats": 11, "unit": "100g"},
+  "oats": {"calories": 379, "protein": 13, "carbs": 67, "fats": 7, "unit": "100g"},
+  "peanut butter": {"calories": 588, "protein": 25, "carbs": 20, "fats": 50, "unit": "100g"}
+}
+EOF
+
+# Update scripts/log_food.py with meal logging + daily totals
+cat <<'EOF' > scripts/log_food.py
 #!/usr/bin/env python3
 import json, os, sys
 from datetime import datetime
@@ -86,3 +107,16 @@ if __name__ == "__main__":
         cals_burned = float(sys.argv[2])
         notes = " ".join(sys.argv[3:]) if len(sys.argv) > 3 else ""
         end_of_day(cals_burned, notes)
+EOF
+
+# Update README with Daily Macro Tracker instructions
+echo -e "\n## 🍽️ Daily Macro Hunter Mode\n\nTrack meals like a savage:\n\nAdd a meal:\n\`\`\`\npython3 scripts/log_food.py meal '200g chicken breast, 100g rice cooked, 10g olive oil'\n\`\`\`\n\nEnd the day & log deficit/surplus:\n\`\`\`\npython3 scripts/log_food.py end 2200 'Push day workout'\n\`\`\`\n\nIt’ll auto-save to \`logs/food_log.jsonl\` and roast you accordingly.\n" >> README.md
+
+# Commit & push
+git add .
+git commit -m "💀 Daily Macro Hunter Mode: Meal logging, totals & savage end-of-day tracking"
+git push origin feature/daily-macro-hunter
+
+# Open PR (requires GitHub CLI)
+gh pr create --title "💀 Daily Macro Hunter Mode: Meal logging, totals & savage end-of-day tracking" --body "Adds meal-by-meal macro logging, running daily totals, and savage end-of-day summaries." --base main --head feature/daily-macro-hunter
+

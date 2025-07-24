@@ -1,0 +1,17 @@
+{
+  "name": "BroPT Skill",
+  "skillMetadata": {
+    "sections": [
+      {
+        "name": "OpenAI Settings",
+        "fields": [
+          {
+            "type": "text",
+            "label": "OpenAI API Key",
+            "name": "openai_api_key"
+          }
+        ]
+      }
+    ]
+  }
+}

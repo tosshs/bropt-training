@@ -138,3 +138,14 @@ python3 scripts/log_food.py end 2200 'Push day workout'
 
 It’ll auto-save to `logs/food_log.jsonl` and roast you accordingly.
 
+
+## 🎙️ Mycroft Voice Mode
+
+Now you can talk to BroPT via Mycroft!
+
+- Say: *Hey BroPT, log meal 200g chicken breast and 100g rice*
+- Say: *Hey BroPT, end today burned 2200 push day*
+- Say: *Hey BroPT, weekly summary*
+
+It calls ChatGPT API and still logs food into logs/food_log.jsonl.
+

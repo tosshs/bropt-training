@@ -108,3 +108,16 @@ And **BroPT is the prime example**.
 
 - Big ups to [OpenAI](https://openai.com) for the GPT backbone  
 - Fueled by sarcasm, caffeine, and a deep loathing for boring bots
+
+## 🥩 Food Log Mode
+
+BroPT now tracks your diet like a savage accountability bro.
+
+Log food:
+/track 2000 in, 2200 burned, 150g protein, 180g carbs, 70g fats, rest day
+
+Weekly Summary:
+/track summary week
+
+Still savage, even about your diet.
+
